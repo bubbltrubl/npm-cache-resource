@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:10
+FROM node:10
 
 MAINTAINER Yeray Medina López <ymedlop@gmail.com>
 
@@ -8,10 +8,10 @@ ARG VCS_REF
 ARG VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.name="npm-cache-resource" \
-      org.label-schema.description="a Concourse resource for caching dependencies downloaded by NPM - built on mhart/alpine-node." \
-      org.label-schema.url="https://ymedlop.github.io/npm-cache-resource" \
+      org.label-schema.description="a Concourse resource for caching dependencies downloaded by NPM - built on node." \
+      org.label-schema.url="https://github.com/bubbltrubl/npm-cache-resource" \
       org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/ymedlop/npm-cache-resource" \
+      org.label-schema.vcs-url="https://github.com/bubbltrubl/npm-cache-resource" \
       org.label-schema.vendor="ymedlop" \
       org.label-schema.version=$VERSION \
       org.label-schema.schema-version="1.0" \
