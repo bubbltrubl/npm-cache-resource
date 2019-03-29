@@ -17,28 +17,6 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.schema-version="1.0" \
       org.label-schema.license="MIT"
 
-RUN apk add --update \
-    openssl \
-    sed \
-    ca-certificates \
-    bash \
-    openssh \
-    make \
-    git \
-    jq \
-    libstdc++ \
-    libpng-dev \
-    nasm \
-    build-base \
-    python \
-    python-dev \
-    # Fix problem with some dependencies: https://github.com/ymedlop/npm-cache-resource/issues/39
-    libtool \
-    automake \
-    autoconf \
-    nasm \
-  && rm -rf /var/cache/apk/*
-
 # according to Brian Clements, can't `git pull` unless we set these
 RUN git config --global user.email "git@localhost" && \
     git config --global user.name "git"
